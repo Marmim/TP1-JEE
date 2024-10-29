@@ -27,16 +27,28 @@ public interface StudentService {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<proxy.Student>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getAllStudents", targetNamespace = "http://WS/", className = "proxy.GetAllStudents")
+    @ResponseWrapper(localName = "getAllStudentsResponse", targetNamespace = "http://WS/", className = "proxy.GetAllStudentsResponse")
+    @Action(input = "http://WS/StudentService/getAllStudentsRequest", output = "http://WS/StudentService/getAllStudentsResponse")
+    public List<Student> getAllStudents();
+
+    /**
+     * 
      * @param arg0
      * @return
      *     returns proxy.Student
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getStudentByCIN", targetNamespace = "http://WS/", className = "proxy.GetStudentByCIN")
-    @ResponseWrapper(localName = "getStudentByCINResponse", targetNamespace = "http://WS/", className = "proxy.GetStudentByCINResponse")
-    @Action(input = "http://WS/StudentService/getStudentByCINRequest", output = "http://WS/StudentService/getStudentByCINResponse")
-    public Student getStudentByCIN(
+    @RequestWrapper(localName = "getStudmetsBycin", targetNamespace = "http://WS/", className = "proxy.GetStudmetsBycin")
+    @ResponseWrapper(localName = "getStudmetsBycinResponse", targetNamespace = "http://WS/", className = "proxy.GetStudmetsBycinResponse")
+    @Action(input = "http://WS/StudentService/getStudmetsBycinRequest", output = "http://WS/StudentService/getStudmetsBycinResponse")
+    public Student getStudmetsBycin(
         @WebParam(name = "arg0", targetNamespace = "")
         String arg0);
 
@@ -54,17 +66,5 @@ public interface StudentService {
     public List<Student> getLimitStudents(
         @WebParam(name = "arg0", targetNamespace = "")
         int arg0);
-
-    /**
-     * 
-     * @return
-     *     returns java.util.List<proxy.Student>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getAllStudents", targetNamespace = "http://WS/", className = "proxy.GetAllStudents")
-    @ResponseWrapper(localName = "getAllStudentsResponse", targetNamespace = "http://WS/", className = "proxy.GetAllStudentsResponse")
-    @Action(input = "http://WS/StudentService/getAllStudentsRequest", output = "http://WS/StudentService/getAllStudentsResponse")
-    public List<Student> getAllStudents();
 
 }

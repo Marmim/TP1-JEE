@@ -18,10 +18,10 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="CIN" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="dateNaiss" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="dateNaissance" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="filiere" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="fullName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="nomComplet" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -33,19 +33,19 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "student", propOrder = {
     "cin",
-    "dateNaiss",
+    "dateNaissance",
     "filiere",
-    "fullName",
-    "id"
+    "id",
+    "nomComplet"
 })
 public class Student {
 
     @XmlElement(name = "CIN")
     protected String cin;
-    protected String dateNaiss;
+    protected String dateNaissance;
     protected String filiere;
-    protected String fullName;
     protected int id;
+    protected String nomComplet;
 
     /**
      * Obtient la valeur de la propriété cin.
@@ -72,27 +72,27 @@ public class Student {
     }
 
     /**
-     * Obtient la valeur de la propriété dateNaiss.
+     * Obtient la valeur de la propriété dateNaissance.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getDateNaiss() {
-        return dateNaiss;
+    public String getDateNaissance() {
+        return dateNaissance;
     }
 
     /**
-     * Définit la valeur de la propriété dateNaiss.
+     * Définit la valeur de la propriété dateNaissance.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setDateNaiss(String value) {
-        this.dateNaiss = value;
+    public void setDateNaissance(String value) {
+        this.dateNaissance = value;
     }
 
     /**
@@ -120,30 +120,6 @@ public class Student {
     }
 
     /**
-     * Obtient la valeur de la propriété fullName.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getFullName() {
-        return fullName;
-    }
-
-    /**
-     * Définit la valeur de la propriété fullName.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setFullName(String value) {
-        this.fullName = value;
-    }
-
-    /**
      * Obtient la valeur de la propriété id.
      * 
      */
@@ -157,6 +133,30 @@ public class Student {
      */
     public void setId(int value) {
         this.id = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété nomComplet.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getNomComplet() {
+        return nomComplet;
+    }
+
+    /**
+     * Définit la valeur de la propriété nomComplet.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNomComplet(String value) {
+        this.nomComplet = value;
     }
 
 }

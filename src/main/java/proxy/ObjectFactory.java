@@ -24,9 +24,9 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetStudentByCIN_QNAME = new QName("http://WS/", "getStudentByCIN");
+    private final static QName _GetStudmetsBycin_QNAME = new QName("http://WS/", "getStudmetsBycin");
     private final static QName _GetAllStudents_QNAME = new QName("http://WS/", "getAllStudents");
-    private final static QName _GetStudentByCINResponse_QNAME = new QName("http://WS/", "getStudentByCINResponse");
+    private final static QName _GetStudmetsBycinResponse_QNAME = new QName("http://WS/", "getStudmetsBycinResponse");
     private final static QName _GetAllStudentsResponse_QNAME = new QName("http://WS/", "getAllStudentsResponse");
     private final static QName _GetLimitStudents_QNAME = new QName("http://WS/", "getLimitStudents");
     private final static QName _GetLimitStudentsResponse_QNAME = new QName("http://WS/", "getLimitStudentsResponse");
@@ -39,11 +39,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetStudentByCIN }
+     * Create an instance of {@link GetStudmetsBycin }
      * 
      */
-    public GetStudentByCIN createGetStudentByCIN() {
-        return new GetStudentByCIN();
+    public GetStudmetsBycin createGetStudmetsBycin() {
+        return new GetStudmetsBycin();
     }
 
     /**
@@ -52,14 +52,6 @@ public class ObjectFactory {
      */
     public GetAllStudents createGetAllStudents() {
         return new GetAllStudents();
-    }
-
-    /**
-     * Create an instance of {@link GetStudentByCINResponse }
-     * 
-     */
-    public GetStudentByCINResponse createGetStudentByCINResponse() {
-        return new GetStudentByCINResponse();
     }
 
     /**
@@ -87,6 +79,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetStudmetsBycinResponse }
+     * 
+     */
+    public GetStudmetsBycinResponse createGetStudmetsBycinResponse() {
+        return new GetStudmetsBycinResponse();
+    }
+
+    /**
      * Create an instance of {@link Student }
      * 
      */
@@ -95,12 +95,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetStudentByCIN }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetStudmetsBycin }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://WS/", name = "getStudentByCIN")
-    public JAXBElement<GetStudentByCIN> createGetStudentByCIN(GetStudentByCIN value) {
-        return new JAXBElement<GetStudentByCIN>(_GetStudentByCIN_QNAME, GetStudentByCIN.class, null, value);
+    @XmlElementDecl(namespace = "http://WS/", name = "getStudmetsBycin")
+    public JAXBElement<GetStudmetsBycin> createGetStudmetsBycin(GetStudmetsBycin value) {
+        return new JAXBElement<GetStudmetsBycin>(_GetStudmetsBycin_QNAME, GetStudmetsBycin.class, null, value);
     }
 
     /**
@@ -113,12 +113,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetStudentByCINResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetStudmetsBycinResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://WS/", name = "getStudentByCINResponse")
-    public JAXBElement<GetStudentByCINResponse> createGetStudentByCINResponse(GetStudentByCINResponse value) {
-        return new JAXBElement<GetStudentByCINResponse>(_GetStudentByCINResponse_QNAME, GetStudentByCINResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://WS/", name = "getStudmetsBycinResponse")
+    public JAXBElement<GetStudmetsBycinResponse> createGetStudmetsBycinResponse(GetStudmetsBycinResponse value) {
+        return new JAXBElement<GetStudmetsBycinResponse>(_GetStudmetsBycinResponse_QNAME, GetStudmetsBycinResponse.class, null, value);
     }
 
     /**

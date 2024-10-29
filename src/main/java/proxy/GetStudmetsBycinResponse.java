@@ -8,12 +8,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java pour getStudentByCINResponse complex type.
+ * <p>Classe Java pour getStudmetsBycinResponse complex type.
  * 
  * <p>Le fragment de schéma suivant indique le contenu attendu figurant dans cette classe.
  * 
  * <pre>
- * &lt;complexType name="getStudentByCINResponse">
+ * &lt;complexType name="getStudmetsBycinResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -27,10 +27,10 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getStudentByCINResponse", propOrder = {
+@XmlType(name = "getStudmetsBycinResponse", propOrder = {
     "_return"
 })
-public class GetStudentByCINResponse {
+public class GetStudmetsBycinResponse {
 
     @XmlElement(name = "return")
     protected Student _return;
